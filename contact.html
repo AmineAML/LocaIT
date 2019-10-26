@@ -64,6 +64,7 @@ header a:hover{
   font-weight:bold;
 }
 
+
 </style>
 </head>
 <body style="background-color: black;"">
@@ -77,13 +78,12 @@ header a:hover{
             <ul>
               <li><a href="index.html">Accueil</a></li>
               <li><a href="QuiSommesNous.html">Qui sommes nous</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li class="current"><a href="contact.html">Contact</a></li>
               <li><a class="btn btn-danger btn-rounded" data-toggle="modal" data-target="#myModal" href="#">Connectez-vous</a></li>
             </ul>
           </nav>
         </div>
       </header>
-
 
 <!-- start the popup dialog connection  -->
 <!-- The Modal -->
@@ -132,18 +132,50 @@ header a:hover{
   <!-- end the popup dialog connection  -->
 
 
-    <div class="container mt-3" style="color: whitesmoke;">
-        <h1>Aide</h1><br>
-        <div class="container mt-3">
-            <h2>Vous y trouverez les réponses aux questions les plus fréquemment posées sur le service LocaIT.</h2><br>
-            <h2>Si vous n’avez pas trouvé de réponse à votre question ou vous avez besoin d'une aide rapide, <a href="contact.html">contactez-nous</a>.</h2><br>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+
+  <div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-dark text-white"><i class="fa fa-envelope"></i> Contact
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="6" required></textarea>
+                        </div>
+                        <div class="mx-auto">
+                        <button type="submit" class="btn btn-danger text-right">Submit</button></div>
+                    </form>
+                </div>
+            </div>
         </div>
-    
+        <div class="col-12 col-sm-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header bg-dark text-white text-uppercase"><i class="fa fa-home"></i> Address</div>
+                <div class="card-body">
+                    <p>1, Avenue Mohamed V</p>
+                    <p>10000 Rabat</p>
+                    <p>Maroc</p>
+                    <p>Email : locait@example.com</p>
+                    <p>Tél.: +212 611111111</p>
+
+                </div>
+
+            </div>
+        </div>
     </div>
+</div>
 
 
 
@@ -154,9 +186,9 @@ header a:hover{
                 <a style="font-weight:bold;  color:#cccccc;">|</a>
                 <a href="Aide-FAQ.html" style="font-weight:bold;  color:#cccccc;">Aide</a>
                 <a style="font-weight:bold;  color:#cccccc;">|</a>
-                <a href="ConditionUtilisation.html" style="font-weight:bold;  color:#cccccc;">Conditions d'utilisation</a>
+                <a href="contact.html" style="font-weight:bold;  color:#cccccc;">Conditions d'utilisation</a>
                 <a style="font-weight:bold;  color:#cccccc;">|</a>
-                <a href="CommentNousTravaillons.html" style="font-weight:bold;  color:#cccccc;">Comment nous travaillons</a>
+                <a href="connect.html" style="font-weight:bold;  color:#cccccc;">Comment nous travaillons</a>
             </div>
         </div>
     </footer>

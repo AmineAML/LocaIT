@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>LocaIT: location des voiture pour les professionel et les particulier</title>
@@ -78,12 +78,63 @@ header a:hover{
               <li class="current"><a href="index.html">Accueil</a></li>
               <li><a href="QuiSommesNous.html">Qui sommes nous</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <li><a href="connect.html">Connectez-vous</a></li>
+              <li><a class="btn btn-danger btn-rounded" data-toggle="modal" data-target="#myModal" href="#">Connectez-vous</a></li>
             </ul>
           </nav>
         </div>
       </header>
 
+<!-- start the popup dialog connection  -->
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Connexion</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body">
+  
+<form action="index.html">
+        <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Email</span>
+    </div>
+    <input type="email" class="form-control" placeholder="Email" required>
+    </div>
+    <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Mot de pass</span>
+    </div>
+    <input type="password" class="form-control" placeholder="Password" required>
+    </div>
+      </div>		
+  
+  <button type="submit" class="btn btn-danger btn-block">LOGIN</button>
+<br/>
+<a class="text-center" style="color: red;" href="#" >Mot de passe oublié?</a>
+<a class="text-center" style="color: red;" href="signup.html" >Vous n'avez pas de compte? S'inscrire</a>
+</form>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <!--button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button-->
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- end the popup dialog connection  -->
+
+
+
+  
+
+<!-- Video auto-play-->
   <div class="carousel-inner" @media(max-width:960px;padding-right:3rem;padding-left:3rem;)>
     <div style="height:100vh;display:flex;align-items:center;color:#fff;">
       <div style=" position:absolute;top:0;left:0;width:100%;height:100vh;overflow:hidden;">
@@ -94,150 +145,201 @@ header a:hover{
     </div>
   </div>
 
+<!-- Generic car modal as an exemple for Toyota Yaris (may used by others)-->
+<div class="modal fade" id="CarRéserver" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Toyota Yaris</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+              <img class="img-responsive" src="Cars/Toyota Yaris Transparent.png" alt="image" />
+              <div style="font-size: 20px; color: grey;">
+              <h5>5 sièges</h5>
+              <h5>1 grande valise</h5>
+              <h5>Air conditionné</h5>
+              <h5>4 portes</h5>
+              <h5>1 petite valise</h5>
+              <h5>Boîte manuelle</h5></div>
+              <div class="card-body">
+                  <form>
+                    <h6>Prise en charge</h6>
+                      <div class="form-group">
+                          <label for="name">Ville</label>
+                          <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" required>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div>
+                            <label for="email"> Date</label>
+                            <div class="col-sm-10">
+                            <input type="date" class="form-control" id="datenee" placeholder="Enter votre date de naissance " name="datenee" required>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="name">Heure</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" required>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <h6>Réstitution</h6>
+                      <div class="form-group">
+                          <label for="name">Ville</label>
+                          <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" required>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <div>
+                                <label for="email"> Date</label>
+                                <div class="col-sm-10">
+                                <input type="date" class="form-control" id="datenee" placeholder="Enter votre date de naissance " name="datenee" required>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="name">Heure</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" required>
+                                  </div>
+                              </div>
+                            </div>
+                      </div>
+                  </form>
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-danger">Réserver</button>
+        </div>
+      </div>
+    </div>
+</div> 
+<!-- End of generic modal -->
 
-
-<div id="demo" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="Location-vehicule-australie.jpg" alt="Los Angeles" width="1100" height="500">
-      <div class="container-fluid justify-content-center" style="z-index: 2;text-align: center;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: white;"><h1>LES MEILLEURS TARIFS</h1></div>
-    </div>
-    <div class="carousel-item">
-      <img src="how-automotive-IoT-solutions-will-disrupt-your-car-rental-business.jpg" alt="Chicago" width="1100" height="500">
-      <div class="container-fluid justify-content-center" style="z-index: 2;text-align: center;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: white;"><h1>LE MEILLEUR SERVICE</h1></div>
-    </div>
-    <div class="carousel-item">
-      <img src="slider2.jpg" alt="New York" width="1100" height="500">
-      <div class="container-fluid justify-content-center" style="z-index: 2;text-align: center;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: white;"><h1>CHOISIR <span style="color: #e8491d; font-weight: bold; font-size: 90px;">LocaIT</span></h1></div>
-    </div>
-  </div>
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
+<div class="container">
 
 <div class="container-fluid" style="margin-top: 2%;">
-
-<div class="container-fluid">
-    <h2 style="color: grey;text-align: center;">Location de voitures pas cher</h2><br>
-    <p style="color: whitesmoke;text-align: center; font-size: 25px;">Notre métier repose principalement sur la location de voiture en courte et moyenne durée. <br><span style="color: #e8491d;font-weight: bold;">LocaIT</span> est reconnue pour son expertise dans la location de voiture à travers le Maroc.</p>
-  </div>
-
-
-
-<div id="beta" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#beta" data-slide-to="0" class="active"></li>
-      <li data-target="#beta" data-slide-to="1"></li>
-      
-    </ul>
-    <!-- The slideshow -->
-    <div class="carousel-inner" style="margin-top: 3%;">
-      <h2 style="color: grey;text-align: center;">Nos véhicules</h2><br>
-      <div class="carousel-item active">
-          <div class="container-fluid"     style="margin-top: 1%;margin-bottom: 4%;">
-              <div class="row justify-content-center">
-                <div class="col-md-3">
-                    <div class="card shadow" style="width:18rem;background-color: black;">
-                        <img class="card-img-top" src="Cars/Toyota Yaris.jpg" alt="Card image">
-                        <div class="card-body text-center" style="color:whitesmoke;">
-                        <h4 class="card-title">Toyota Yaris</h4>
-                        <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
-                        <h6 style="text-align: right;">600 MAD/3jr</h6>
-                        <a href="#" class="btn btn-danger">Réserver</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card shadow" style="width:18rem;background-color: black">
-                        <img class="card-img-top" src="Cars/Peugeot 208.jpg" alt="Card image">
-                        <div class="card-body text-center" style="color:whitesmoke;">
-                        <h4 class="card-title">Peugeot 208</h4>
-                        <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
-                        <h6 style="text-align: right;">640 MAD/3jr</h6>
-                        <a href="#" class="btn btn-danger">Réserver</a>
-                        </div>
-                      </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="card shadow" style="width:18rem;background-color: black">
-                        <img class="card-img-top" src="Cars/Hyundai i10.jpg" alt="Card image">
-                        <div class="card-body text-center" style="color:whitesmoke;">
-                        <h4 class="card-title">Hyundai i10</h4>
-                        <p class="card-text"><ul><h6>4 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
-                        <h6 style="text-align: right;">656 MAD/3jr</h6>
-                        <a href="#" class="btn btn-danger">Réserver</a>
-                        </div>
-                      </div>
-                </div>
-            </div>
-            </div>
-      </div>
-      <div class="carousel-item">
-          <div class="container-fluid"     style="margin-top: 1%;margin-bottom: 4%;">
-              <div class="row justify-content-center">
-                <div class="col-md-3">
-                    <div class="card shadow" style="width:18rem;background-color: black">
-                        <img class="card-img-top" src="Cars/Fiat 500.jpg" alt="Card image">
-                        <div class="card-body text-center" style="color:whitesmoke;">
-                        <h4 class="card-title">Fiat 500</h4>
-                        <p class="card-text"><ul><h6>4 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
-                        <h6 style="text-align: right;">952 MAD/3jr</h6>
-                        <a href="#" class="btn btn-danger">Réserver</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card shadow" style="width:18rem;background-color: black">
-                        <img class="card-img-top" src="Cars/Dacia Docker.jpg" alt="Card image">
-                        <div class="card-body text-center" style="color:whitesmoke;">
-                        <h4 class="card-title">Dacia Dokker</h4>
-                        <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
-                        <h6 style="text-align: right;">860 MAD/3jr</h6>
-                        <a href="#" class="btn btn-danger">Réserver</a>
-                        </div>
-                      </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="card shadow" style="width:18rem;background-color: black">
-                        <img class="card-img-top" src="Cars/Peugeot 301.jpg" alt="Card image">
-                        <div class="card-body text-center" style="color:whitesmoke;">
-                        <h4 class="card-title">Peugeot 301</h4>
-                        <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
-                        <h6 style="text-align: right;">1620 MAD/3jr</h6>
-                        <a href="#" class="btn btn-danger">Réserver</a>
-                        </div>
-                      </div>
-                </div>
-            </div>
-            </div>
-      </div>
+  
+  <div class="container-fluid">
+      <h2 style="color: grey;text-align: center;">Location de voitures pas cher</h2><br>
+      <p style="color: whitesmoke;text-align: center; font-size: 25px;">Notre métier repose principalement sur la location de voiture en courte et moyenne durée. <br><span style="color: #e8491d;font-weight: bold;">LocaIT</span> est reconnue pour son expertise dans la location de voiture à travers le Maroc.</p>
     </div>
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#beta" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#beta" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-  </div>
-
 </div>
 
+<!-- start block cards -->
+<div class="row justify-content-center bg-blue" style="margin-left:0px; margin-top:15px;">
+  <div class="card shadow" style="width:18rem;background-color: black;">
+    <img class="card-img-top" src="Cars/Toyota Yaris Transparent.png" alt="Card image">
+    <div class="card-body text-center" style="color:whitesmoke;">
+    <h4 class="card-title">Toyota Yaris</h4>
+    <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
+    <h6 style="text-align: right;">600 MAD/3jr</h6>
+    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#CarRéserver">Réserver</a>
+    </div>
+  </div>
+  <div class="card shadow" style="width:18rem;background-color: black">
+    <img class="card-img-top" src="Cars/Peugeot 208 transparent.png" alt="Card image">
+    <div class="card-body text-center" style="color:whitesmoke;">
+    <h4 class="card-title">Peugeot 208</h4>
+    <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
+    <h6 style="text-align: right;">640 MAD/3jr</h6>
+    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#CarRéserver">Réserver</a>
+    </div>
+  </div>
+  <div class="card shadow" style="width:18rem;background-color: black">
+    <img class="card-img-top" src="Cars/Hyundai i10 transparent.png" alt="Card image">
+    <div class="card-body text-center" style="color:whitesmoke;">
+    <h4 class="card-title">Hyundai i10</h4>
+    <p class="card-text"><ul><h6>4 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
+    <h6 style="text-align: right;">656 MAD/3jr</h6>
+    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#CarRéserver">Réserver</a>
+    </div>
+  </div>
+  <div class="card shadow" style="width:18rem;background-color: black">
+    <img class="card-img-top" src="Cars/Fiat 500 transparent.png" alt="Card image">
+    <div class="card-body text-center" style="color:whitesmoke;">
+    <h4 class="card-title">Fiat 500</h4>
+    <p class="card-text"><ul><h6>4 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
+    <h6 style="text-align: right;">952 MAD/3jr</h6>
+    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#CarRéserver">Réserver</a>
+    </div>
+  </div>
+  <div class="card shadow" style="width:18rem;background-color: black">
+    <img class="card-img-top" src="Cars/Dacia Docker transparent.png" alt="Card image">
+    <div class="card-body text-center" style="color:whitesmoke;">
+    <h4 class="card-title">Dacia Dokker</h4>
+    <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
+    <h6 style="text-align: right;">860 MAD/3jr</h6>
+    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#CarRéserver">Réserver</a>
+    </div>
+  </div>
+  <div class="card shadow" style="width:18rem;background-color: black">
+    <img class="card-img-top" src="Cars/Peugeot 301 transparent.png" alt="Card image">
+    <div class="card-body text-center" style="color:whitesmoke;">
+    <h4 class="card-title">Peugeot 301</h4>
+    <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
+    <h6 style="text-align: right;">1620 MAD/3jr</h6>
+    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#CarRéserver">Réserver</a>
+    </div>
+  </div>  
+  <div class="card shadow" style="width:18rem;background-color: black">
+    <img class="card-img-top" src="Cars/golf6.png" alt="Card image">
+    <div class="card-body text-center" style="color:whitesmoke;">
+    <h4 class="card-title">VW GOLF 6</h4>
+    <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
+    <h6 style="text-align: right;">1710 MAD/3jr</h6>
+    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#CarRéserver">Réserver</a>
+    </div>
+  </div>
+  
+  <div class="card shadow" style="width:18rem;background-color: black">
+    <img class="card-img-top" src="Cars/bmws1.png" alt="Card image">
+    <div class="card-body text-center" style="color:whitesmoke;">
+    <h4 class="card-title">BMW SERIE 1</h4>
+    <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
+    <h6 style="text-align: right;">1720 MAD/3jr</h6>
+    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#CarRéserver">Réserver</a>
+    </div>
+  </div>
+  
+  <div class="card shadow" style="width:18rem;background-color: black">
+    <img class="card-img-top" src="Cars/fordfiestas.png" alt="Card image">
+    <div class="card-body text-center" style="color:whitesmoke;">
+    <h4 class="card-title">FORD FIESTAS</h4>
+    <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
+    <h6 style="text-align: right;">1800 MAD/3jr</h6>
+    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#CarRéserver">Réserver</a>
+    </div>
+  </div>
+  
+  <div class="card shadow" style="width:18rem;background-color: black">
+    <img class="card-img-top" src="Cars/renaultclio.png" alt="Card image">
+    <div class="card-body text-center" style="color:whitesmoke;">
+    <h4 class="card-title">RENAULT CLIO</h4>
+    <p class="card-text"><ul><h6>5 sièges</h6><h6>Kilométrage ilimité</h6></ul></p>
+    <h6 style="text-align: right;">1810 MAD/3jr</h6>
+    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#CarRéserver">Réserver</a>
+    </div>
+  </div>
+</div>
+
+<!-- end block cards -->
+
+
+<div class="container-fluid" style="margin-top: 2%;">
+  
+  <div class="container-fluid">
+      <h2 style="color: grey;text-align: center;">Choisir <span style="color: #e8491d; font-weight: bold;">LocaIT</span> C'est choisir</h2><br>
+      <p style="color: whitesmoke;text-align: center; font-size: 25px;">LES MEILLEURS TARIFS    |    LE MEILLEUR SERVICE</p>
+    </div>
+</div>
+
+</div><!--Closing of the fixed container-->
 
 <footer style="margin-top: 8%;">
     <div class="container-fluid" style="background-color: black; padding: 15px 20px 15px 20px; text-align: center;">
